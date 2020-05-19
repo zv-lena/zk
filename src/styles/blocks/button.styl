@@ -1,0 +1,68 @@
+.button
+	font-family 'FuturaPT'
+	font-weight 300
+	font-size 16px
+	letter-spacing 0.01em
+	transition background 350ms, color 350ms
+	display inline-block
+	background none
+	cursor pointer
+	border none
+	outline none
+
+	&:hover
+	&:focus
+		transition-duration 175ms
+
+	&_fill
+		&_primary
+			background $primary
+			color $white
+
+			&:hover
+			&:focus
+				background lighten($primary, 5)
+
+		&_secondary
+			background $secondary
+			color $white
+
+			&:hover
+			&:focus
+				background darken($secondary, 5)
+
+	&_border
+
+		&_primary
+			border 1px solid $primary
+			color $primary
+
+			&:hover
+			&:focus
+				background $primary
+				color $white
+
+		&_secondary
+			border 1px solid $secondary
+			color $black
+
+			&:hover
+			&:focus
+				background $secondary
+				color $black
+
+		&_light
+			border 1px solid #fff
+			color #fff
+
+			&:hover
+			&:focus
+				background #fff
+				color $primary
+
+	&_thin
+		padding 8px
+
+	&_fat
+		padding 8px 16px
+		font-weight 500

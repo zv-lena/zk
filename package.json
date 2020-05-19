@@ -1,0 +1,38 @@
+{
+  "name": "zkip",
+  "version": "0.0.1",
+  "description": "Сайт для ЖК «Измаильский парк»",
+  "main": "index.html",
+  "scripts": {
+    "watch": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "author": "flamingo-web",
+  "license": "ISC",
+  "browserslist": "last 4 version",
+  "dependencies": {
+    "animated-scroll-to": "^2.0.5",
+    "inputmask": "^4.0.9",
+    "jquery": "^3.4.1",
+    "magnific-popup": "^1.1.0",
+    "noty": "^3.2.0-beta",
+    "nouislider": "^14.0.3",
+    "swiper": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "autoprefixer": "^9.7.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}

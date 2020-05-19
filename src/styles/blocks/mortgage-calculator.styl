@@ -1,0 +1,103 @@
+.mortgage-calculator
+	padding 72px 0
+	background #fff
+
+	&__content
+		display flex
+		margin-bottom 0
+
+	&__title
+		font-size 18px
+		text-transform uppercase
+		font-weight 300
+		margin 0
+
+	&__controls
+		background $primary
+		color #fff
+		padding 40px
+		width 30%
+		margin 0
+
+	&__additional-condition-label
+		font-size 14px
+		font-weight 300
+
+		span
+			font-size 12px
+			color $gray
+
+	&__info
+		width 70%
+		border 1px solid $grayLight
+		display flex
+		flex-direction column
+
+	&__bank-list
+		padding 24px 32px
+		border-bottom 1px solid $grayLight
+
+	&__applay
+		padding 24px 32px
+		margin 0
+		margin-top auto
+
+	&__applay-description
+		font-size 14px
+		font-weight 300
+		margin 0
+
+	&__applay-fields
+		display flex
+
+	&__applay-field
+		margin-right 24px
+		flex-grow 1
+
+	&__applay-btn
+		height 41px
+		min-width 200px
+
+	@media screen and (max-width: 1200px)
+		&__controls
+			padding 24px
+
+		&__bank-list
+		&__applay
+			padding 24px
+
+		&__applay-field
+			margin-right 16px
+
+	@media screen and (max-width: 1023px)
+		&__content
+			flex-direction column
+
+		&__controls
+			width 100%
+
+		&__info
+			width 100%
+
+	@media screen and (max-width: 767px)
+		padding 0 0 56px
+
+		&__content
+			width 100%
+
+		&__info
+			border none
+		
+		&__controls
+			padding-top 40px
+
+		&__applay
+			padding-bottom 0
+
+		&__applay-fields
+			flex-wrap wrap
+
+		&__applay-field
+			margin-right 0
+			width 100%
+			margin-bottom 8px

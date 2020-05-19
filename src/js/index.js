@@ -1,0 +1,14 @@
+import "./blocks/plugins/jquery.init";
+import './blocks/infrastructure';
+import './blocks/advantages';
+import './blocks/range';
+import './blocks/bank-list';
+import './blocks/bank-viewer';
+import './blocks/mortgage-calculator';
+import './blocks/accordion';
+import './blocks/header';
+import './blocks/scroll-to';
+import './blocks/apartment-selection';
+import './blocks/footer';
+import './blocks/popup';
+import './blocks/input-phone';

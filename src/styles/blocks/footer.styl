@@ -1,0 +1,119 @@
+.footer
+	background $primary
+	padding 72px 0
+	position relative
+	color #fff
+
+	&__content
+		display flex
+
+	&__block
+		width 50%
+		margin 0
+
+		&:first-child
+			padding-right 126px
+
+			&::before
+				content ''
+				display block
+				position absolute
+				width 1px
+				height calc(100% - 80px)
+				left calc(50% - 1px)
+				top 40px
+				background $primaryLight
+
+		&:last-child
+			padding-left 126px
+
+	&__title
+		margin 0
+
+	&__hint
+		margin 0
+
+	&__item-title
+		font-size 14px
+		text-transform uppercase
+		font-weight 300
+		color $priamryLight
+		margin 0
+
+	&__phones
+		display flex
+
+	&__phone-block
+		&:not(:last-child)
+			margin-right 40px
+
+	&__phone
+		font-size 24px
+		color #fff
+		transition color 350ms
+		white-space nowrap
+
+		&:hover
+		&:focus
+			transition-duration 175ms
+			color darken(#fff, 25)
+
+	&__address
+		margin 0
+
+	&__work-time
+		color $primaryLight
+		white-space nowrap
+
+	&__social-buttons
+		display flex
+
+	&__social-button
+		padding 8px 16px
+		font-weight 500
+
+		&:not(:last-child)
+			margin-right 8px
+			
+
+	@media screen and (max-width: 1200px)
+		&__block
+			&:first-child
+				padding-right 10%
+
+			&:last-child
+				padding-left 10%
+		&__phone
+			font-size 18px
+
+	@media screen and (max-width: 1023px)
+		&__content
+			flex-direction column
+
+		&__block
+			width 100%
+
+			&:first-child
+				margin-bottom 32px
+				padding-bottom 32px
+				border-bottom 1px solid $primaryLight
+
+				&::before
+					display none
+
+			&:first-child
+			&:last-child
+				padding-left 0
+				padding-right 0
+
+	@media screen and (max-width: 767px)
+		padding 56px 0
+
+
+	@media screen and (max-width: 424px)
+		&__phones
+			flex-direction column
+		
+		&__phone-block
+			&:first-child
+				margin-bottom 16px

@@ -1,0 +1,81 @@
+.section-label
+    position absolute
+    z-index 1
+    left 40px
+    top 50%
+    transform translateY(-50%) scale(-1)
+    writing-mode: vertical-lr;
+    white-space: nowrap;
+
+    &__title
+        text-transform uppercase
+        color $white
+        font-size 14px
+        line-height 16px
+        font-weight 400
+        letter-spacing 0.01em
+        padding-top 8px
+        display inline-block
+
+    &__scale
+        display inline-block
+        width 1px
+        height 144px
+        background $grayLight
+        position relative
+
+        &::before
+            content ""
+            width 1px
+            height 16px
+            display block
+            background $white
+            position absolute
+            bottom 0
+
+        &_2
+            &::before
+                height 32px
+
+        &_3
+            &::before
+                height 48px
+
+        &_4
+            &::before
+                height 64px
+
+        &_5
+            &::before
+                height 80px
+
+        &_6
+            &::before
+                height 96px
+
+        &_7
+            &::before
+                height 112px
+
+        &_8
+            &::before
+                height 128px
+
+        &_9
+            &::before
+                height 144px
+
+
+    &_dark
+
+        & ^[0]__title
+            color $black
+
+        & ^[0]__scale
+            background $grayDark
+
+            &::before
+                background $black
+
+    @media screen and (max-width: 1439px)
+        display none

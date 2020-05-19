@@ -1,0 +1,38 @@
+.docs
+	padding 72px 0
+
+	&__headline
+		display flex
+		justify-content space-between
+	
+	&__title
+		width 50%
+		margin 0
+
+	&__help
+		display flex
+		flex-direction column
+		align-items flex-end
+		text-align right
+
+	&__accordions
+	&__list
+		list-style none
+		margin 0
+		padding 0
+
+	@media screen and (max-width: 767px)
+		padding 56px 0
+
+		&__title
+			width 100%
+			margin-bottom 24px
+
+		&__headline
+			flex-direction column
+			align-items flex-start
+
+		&__help
+			align-items flex-start
+			text-align left
+

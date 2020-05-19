@@ -1,0 +1,26 @@
+.social-list
+	margin 0
+	padding 0
+	list-style none
+	display flex
+
+	&__link
+		margin-right 8px
+		display block
+
+		svg
+			width 21px
+			height 21px
+			fill $black
+
+	&_white
+
+		& ^[0]__link
+			svg
+				fill rgba(255,255,255, 0.7)
+				transition fill .6s
+
+			&:hover
+				svg
+					fill rgba(255,255,255, 1)
+					transition fill .3s

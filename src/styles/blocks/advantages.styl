@@ -1,0 +1,185 @@
+.advantages
+	background $white
+	position relative
+	padding 72px 0 142px
+
+	&__content
+		position relative
+
+	&__title
+		margin 0
+		width calc(50% - 20px)
+		margin-bottom 245px
+
+	&__descriptions
+		width 70%
+		position absolute
+		right 0
+		top -100px
+		display flex
+		justify-content space-between
+		align-items flex-end
+		margin-bottom -24px
+
+	&__block
+		width calc(33.3333% - 16px)
+
+	&__item
+		position relative
+		display block
+
+		&::before
+			content ''
+			display block
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			background rgba(0,0,0,.48)
+
+		&:hover
+
+			& ^[0]__video-play
+				transform scale(1.1)
+				transition transform 0.3s
+
+	&__item-image
+		display block
+		width 100%
+
+	&__item-content
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		display flex
+		flex-direction column
+		justify-content flex-end
+		color $white
+		padding 24px
+
+		&_left-top
+			justify-content flex-start
+
+		&_right-top
+			justify-content flex-start
+			align-items flex-end
+
+	&__item-title
+		font-size 14px
+		font-weight 400
+		margin 0 0 4px
+
+	&__item-description
+		font-size 14px
+		font-weight 300
+		margin 0
+
+	&__item-count
+		font-size 64px
+		margin-top auto
+		align-self flex-end
+
+	&__pagination
+		right auto
+		left 0
+		bottom 40px !important
+		top auto !important
+		transform none !important
+
+	&__bullet
+		background none
+		color $white
+		width auto
+		height auto
+		display flex !important
+		align-items center
+		font-size 14px
+		line-height 16px
+		opacity 1
+		margin 16px 0!important
+
+		&::before
+			content ''
+			display block
+			width 32px
+			height 1px
+			background #fff
+			margin-right 8px
+			transition width 350ms
+
+		&.swiper-pagination-bullet-active
+			font-size 16px
+
+			&::before
+				transition-duration 175ms
+				width 64px
+
+	&__item-video-overlay
+		position absolute
+		left 24px
+		top 24px
+		width calc(100% - 48px)
+		height calc(100% - 48px)
+		color $white
+
+		& ^[0]__item-title
+			text-align center
+			position absolute
+			bottom 0
+			left 0
+			margin-bottom 16px
+			width 100%
+
+	&__video-play
+		fill #fff
+		width 100%
+		height 100%
+		transition transform 0.7s
+
+	&__excursion
+		width 27%
+
+	@media screen and (max-width: 1200px)
+		&__title
+			margin-bottom 110px
+
+	@media screen and (max-width: 1023px)
+		padding 72px 0
+
+		&__title
+			margin-bottom 32px
+			width 100%
+
+		&__descriptions
+			position static
+			width 100%
+			display block
+			margin-bottom 24px
+
+		&__block
+			width 100%
+			margin-bottom 24px
+
+		&__item-title
+			font-size 18px
+
+		&__item-description
+			font-size 16px
+
+		&__excursion
+			width 100%
+
+		&__pagination
+			bottom 12% !important
+
+		.swiper-wrapper
+			height auto
+
+	@media screen and (max-width: 767px)
+		padding 56px 0
+
+		&__block
+			margin-bottom 16px

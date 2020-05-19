@@ -1,0 +1,87 @@
+.achievements
+	padding 72px 0
+	background $white
+
+	&__content
+		display flex
+		justify-content space-between
+
+	&__block
+		width calc(50% - 20px)
+
+	&__quote
+		margin 24px 0 0
+		position relative
+		margin 0
+
+		&::before
+			width 62px
+			height 62px
+			content ''
+			display block
+			position absolute
+			left -27px
+			top -27px
+			background-image url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjEgNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgb3BhY2l0eT0iLjIiIGZpbGw9IiM5RkJCQjgiPjxwYXRoIGQ9Ik02MSAyNy44NTdINDcuOTI5bDguNzE0IDE3LjQyOUg0My41N2wtOC43MTQtMTcuNDI5VjEuNzE0SDYxdjI2LjE0M3pNMjYuMTQzIDEuNzE0djI2LjE0M0gxMy4wN2w4LjcxNSAxNy40MjlIOC43MTRMMCAyNy44NTdWMS43MTRoMjYuMTQzeiIvPjwvZz48L3N2Zz4=')
+			background-repeat no-repeat
+			background-size 61px
+
+		p
+			font-size 36px
+			line-height 0.94em
+			margin 0 0 16px 0
+
+	&__author
+		color $gray
+
+	&__list
+		list-style none
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		margin 0 0 -24px 0
+		padding 0
+
+	&__item
+		width calc(50% - 10px)
+		display flex
+		flex-direction column
+		margin-bottom 24px
+
+	&__item-image
+		height 72px
+		align-self flex-start
+		margin-bottom 8px
+
+	&__item-subtitle
+		color $grayDark
+
+	@media screen and (max-width: 1023px)
+		&__content
+			flex-direction column
+
+		&__block
+			width 100%
+
+			&:first-child
+				margin-bottom 24px
+
+		&__quote
+			&::before
+				left -20px
+				top -20px
+
+			p
+				font-size 28px
+
+		@media screen and (max-width: 767px)
+			padding 56px 0
+
+			&__quote
+				&::before
+					left -10px
+					top -10px
+
+		@media screen and (max-width: 424px)
+			&__item-image
+				height 55px

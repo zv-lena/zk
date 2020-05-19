@@ -1,0 +1,31 @@
+.policy
+	padding 16px
+	display flex
+	justify-content space-between
+	align-items center
+
+	&__desc
+		max-width 55%
+		font-size 14px
+		color $grayDark
+		font-weight 300
+		margin-bottom 16px
+	
+	&__link
+		font-size 14px
+		color $primary
+		transition color 350ms
+
+		&:hover
+		&:focus
+			transition-duration 175ms
+			color lighten($primary, 5)
+
+	@media screen and (max-width: 1023px)
+		flex-direction column
+		align-items flex-start
+
+		&__desc
+			max-width 100%
+
+

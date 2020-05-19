@@ -1,0 +1,114 @@
+.infrastructure
+	display flex
+	padding-left calc((100% - 1200px) / 2)
+	padding-bottom 72px
+
+	&__content
+		width calc((1200px / 2) - 20px)
+		margin-right 40px
+		padding-top 72px
+
+	&__map
+		flex-grow 1
+
+	&__title
+		margin 0
+
+	&__text-mark
+		color $secondary
+
+	&__hint
+		display block
+
+	&__controls
+		list-style none
+		padding 0
+		margin 0
+
+	&__control
+		background-color $white
+		background-repeat no-repeat
+		background-position 16px 50%
+		padding 24px 16px 24px 80px
+		display inline-block
+		color $black
+		transition background-color 350ms, padding 350ms
+		position relative
+
+		&:hover
+			transition-duration 175ms
+			background-color darken($white, 5)
+
+		&_selected
+			transition-duration 175ms
+			padding-right 55px
+			background-color $white !important
+			cursor default
+
+	&__check-icon
+		width 24px
+		height 16px
+		fill $secondary
+		position absolute
+		right 16px
+		top 25px
+		opacity 0
+		transition opacity 175ms
+
+		^[0]__control_selected &
+			transition-duration 175ms
+			transition-delay 155ms
+			opacity 1
+
+	&__description
+		color $grayDark
+		font-weight 300
+
+	@media screen and (max-width: 1333px)
+		padding-left 5%
+
+		&__content
+			width 45%
+			margin-right 40px
+
+	@media screen and (max-width: 1023px)
+		display block
+		padding-left 0
+		width 90%
+		margin-left auto
+		margin-right auto
+
+		&__content
+			width 100%
+
+		&__controls
+			display flex
+			flex-wrap wrap
+
+			li
+				margin-right 16px
+
+		&__control
+			padding 16px 16px 16px 61px
+			background-size 32px
+
+			&:hover
+			&:focus
+				transition-duration 175ms
+				background-color $white
+
+			&_selected
+				background-color darken($white, 5) !important
+		
+		&__check-icon
+			display none
+
+		&__map
+			width 100%
+			height 350px
+
+	@media screen and (max-width: 767px)
+		padding-bottom 56px
+
+		&__content
+			padding-top 56px

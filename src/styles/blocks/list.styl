@@ -1,0 +1,15 @@
+.list
+	& > li
+		position relative
+		padding-left 16px
+		font-size 18px
+
+		&::before
+			content ''
+			display block
+			position absolute
+			width 8px
+			height 1px
+			background $secondary
+			left 0
+			top 12px

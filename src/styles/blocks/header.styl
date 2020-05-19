@@ -1,0 +1,299 @@
+.header
+	background $white
+	&__mobile
+		display none
+
+	&__headline
+	&__nav-list
+		margin 0
+		padding 0
+		list-style none
+
+	&__headline
+		^[0]_fixed &
+			margin-bottom 70px
+
+	&__logo-link
+		display block
+		margin-top 20px
+
+	&__contact-block
+			display flex
+			flex-direction column
+			align-items flex-end
+
+	&__icon-phone-link
+		margin-right 8px
+		fill $primaryLight
+		transition fill 350ms
+
+	&__icon-phone
+		width 24px
+		height 24px
+
+		^[0]__icon-phone-link:hover &
+		^[0]__icon-phone-link:focus &
+			transition-duration 175ms
+			fill darken($primaryLight, 25)
+
+	&__contact-content
+		display flex
+		flex-direction column
+		text-align right
+	
+	&__phone
+		font-size 20px
+		display inline-block
+
+	&__nav-link
+		color $black
+		font-size 16px
+		text-transform uppercase
+
+	&__headline-link
+		color $black
+		font-weight 300
+
+	&__mobile-menu-phone
+		display none
+
+	&__mobile-contact-block
+		display none
+
+	@media screen and (min-width: 1023px)
+		&__mobile-menu-footer
+			display none
+
+		&__mobile-headline
+			display none
+
+		&__content
+			position relative
+			z-index 2
+			background: $white
+
+		&__headline
+			display flex
+			justify-content flex-end
+			align-items center
+			padding 16px 0
+			max-width 1360px
+			width 90%
+			margin-left auto
+			margin-right auto
+
+		&__headline-item
+			&:not(:last-child)
+				margin-right 40px
+
+		&__main-line
+			height 70px
+			top -70px
+
+			^[0]_fixed &
+				background #fff
+				transition-duration 175ms
+				position fixed
+				top 0
+				z-index 2
+				width 100%
+				border-bottom 1px solid $grayLight
+
+		&__main-line-content
+			display flex
+			justify-content space-between
+			align-items center
+			max-width 1360px
+			width 85%
+			margin-left auto
+			margin-right auto
+			position relative
+
+		&__logo-link
+			margin-right auto
+			position absolute
+			left 0
+			bottom 10px
+
+			^[0]_fixed &
+				position static
+
+		&__logo
+			^[0]_fixed &
+				height 56px
+
+		&__nav
+			display flex
+
+		&__nav-list
+			display flex
+
+		&__nav-item
+			padding 24px 0
+
+			&:not(:last-child)
+				margin-right 40px
+
+		&__separator
+			width 64px
+			display flex
+			justify-content center
+			align-items center
+
+			&::before
+				content ''
+				display block
+				width 1px
+				height 34px
+				background $grayLight
+
+		&__callback
+			color $grayDark
+			font-weight 300
+			letter-spacing 0.01em
+			transition color 350ms
+
+			&:hover
+			&:focus
+				transition-duration 175ms
+				color darken($grayDark, 25)
+
+	@media screen and (max-width: 1023px)
+		&__mobile-headline
+			height 70px
+			position relative
+			background $white
+			display block
+			border-bottom 1px solid $grayLight
+			position fixed
+			width 100%
+			top 0
+			left 0
+			z-index 2
+
+		&__mobile-headline-content
+			display flex
+			align-items center
+			height 100%
+
+		&__logo-link
+			margin-right auto
+
+		&__logo
+			height 56px
+
+		&__contact-block
+			margin-right 16px
+			display flex
+			flex-direction column
+			align-items flex-end
+
+		&__btn-menu-open
+			outline none
+			height 21px
+			display flex
+			flex-direction column
+			justify-content space-between
+			padding 0
+			position relative
+			background none
+			border none
+
+			&::before
+				content ''
+				display block
+				position absolute
+				left 50%
+				top 50%
+				transform translateX(-50%) translateY(-50%)
+				width 50px
+				height 50px
+
+			span
+				width 24px
+				height 3px
+				background $black
+				display block
+				transition transform 350ms, top 350ms 100ms, opacity 350ms 100ms
+				position relative
+				top 0
+				transform-origin 50% 50%
+
+				^[0]_open &
+					transition transform 175ms 100ms, top 175ms, opacity 175ms
+
+					&:nth-child(1)
+						top 9px
+						transform rotate(-45deg)
+
+					&:nth-child(2)
+						opacity 0
+
+					&:nth-child(3)
+						top -8px
+						transform rotate(45deg)
+
+		&__mobile-off
+			display none
+
+		&__mobile-wrapper
+			background #fff
+			position fixed
+			height calc(100vh - 70px)
+			left 0
+			top 70px
+			z-index 2
+			width 100%
+			overflow scroll
+			opacity 0
+			visibility hidden
+			transition opacity 350ms, visibility 350ms
+
+			^[0]_open &
+				transition-duration 175ms
+				opacity 1
+				visibility visible
+
+		&__content
+			width 90%
+			margin-left auto
+			margin-right auto
+			flex-direction column-reverse
+			display flex
+			justify-content flex-end
+			padding 10% 0 24px
+			transform translateY(10px)
+			transition transform 250ms
+			opacity 0
+			visibility hidden
+
+			^[0]_open &
+				opacity 1
+				visibility visible
+				transition-duration 175ms
+				transform translateY(0)
+
+		&__main-line-content &__logo-link
+			display none
+
+		&__nav-item
+			margin-bottom 8px
+
+		&__nav-link
+		&__headline-link
+			font-size 32px
+			font-weight 500
+
+		&__mobile-menu-footer
+			margin-top 30px
+			display flex
+			flex-direction column
+			align-items flex-start
+
+		&__phone
+			font-weight 500
+
+	@media screen and (max-width: 767px)
+		&__icon-phone-link
+			fill $primary
+

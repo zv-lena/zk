@@ -1,0 +1,81 @@
+.bank-viewer
+	padding 24px 32px
+	display flex
+	justify-content space-between
+	min-height 250px
+	position relative
+
+	&__bank-info
+		width calc(50% - 34px)
+
+	&__bank-logo
+		height 38px
+	
+	&__bank-desc
+		line-height 1.25em
+		margin 0
+
+	&__calc-result
+		width calc(50% - 34px)
+
+	&__payment-info
+		background #f9f9f9
+		padding 24px
+		list-style none
+
+	&__payment-info-item
+		display flex
+		justify-content space-between
+		align-items center
+
+	&__payment-value
+		font-size 24px
+		font-weight 500
+		white-space nowrap
+
+	&__placeholder
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		background #fff
+		display flex
+		flex-direction column
+		align-items center
+		justify-content center
+		opacity 0
+		visibility hidden
+		padding 24px
+		text-align center
+
+		^[0]_empty &
+			opacity 1
+			visibility visible
+
+		img
+			width 60px
+			height 54px
+			display block
+
+		p
+			margin 0
+			font-weight 30
+
+	@media screen and (max-width: 1200px)
+		padding 24px
+
+		&__bank-info
+		&__calc-result
+			width calc(50% - 16px)
+
+	@media screen and (max-width: 767px)
+		flex-direction column
+		padding-bottom 0
+
+		&__bank-info
+			width 100%
+		
+		&__calc-result
+			width 100%
+

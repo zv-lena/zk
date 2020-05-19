@@ -1,0 +1,31 @@
+.text-checkbox
+	display inline-block
+
+	input
+		position absolute
+		clip rect(0 0 0 0)
+		width 1px
+		height 1px
+		margin -1px
+
+	&__label
+		position relative
+		padding-bottom 2px
+		cursor pointer
+
+		&::before
+			content ''
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 1px
+			background #fff
+			transition transform 350ms
+			transform scaleX(0)
+			transform-origin 0
+
+		input:checked + &:before
+			transition-duration 175ms
+			transform scaleX(1)

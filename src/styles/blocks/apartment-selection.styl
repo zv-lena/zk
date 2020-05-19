@@ -1,0 +1,102 @@
+.apartment-selection
+	$border = 1px solid $primaryLight
+	position relative
+	background #fff
+	z-index 1
+
+	&::before
+		content ''
+		display block
+		position absolute
+		left 50%
+		top 24px
+		transform translateX(-50%)
+		max-width 1360px
+		width 95%
+		height 100%
+		background $primary
+
+	&__content
+		position relative
+		top 24px
+		padding 40px 0
+		color #fff
+
+	&__title
+		text-transform uppercase
+		font-size 18px
+		margin 0
+		font-weight 300
+
+	&__form
+		border $border
+		display flex
+		margin 0
+
+	&__section
+		padding 24px
+
+	&__section-title
+		font-size 14px
+		font-weight 300
+		margin 0
+
+	&__type
+		border-right $border
+		width 15%
+
+	&__thumbs
+		border-right $border
+		width 36%
+
+	&__floor
+		border-bottom $border
+
+	&__wishes
+		border-right $border
+		width 23%
+		display flex
+		flex-direction column
+		align-items flex-start
+
+	&__get-selection
+		width 26%
+
+	@media screen and (max-width: 1023px)
+		&::before
+			width 100%
+			top 0
+		
+		&__content
+			top 0
+
+		&__form
+			flex-wrap wrap
+
+		&__type
+			width 150px
+			display flex
+			flex-direction column
+			border-bottom $border
+
+		&__thumbs
+			width auto
+			flex-grow 1
+			border-right none
+			border-bottom $border
+
+		&__wishes
+			width 260px
+
+		&__get-selection
+			flex-grow 1
+
+	@media screen and (max-width: 767px)
+		&__type
+		&__thumbs
+		&__wishes
+		&__get-selection
+			width 100%
+
+		&__wishes
+			border-bottom $border

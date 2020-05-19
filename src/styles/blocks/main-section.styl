@@ -1,0 +1,173 @@
+.main-section
+	height 800px
+	min-height 400px
+	background-size 0
+	position relative
+	margin-top -139px
+	border-bottom 1px solid $grayLight
+	display flex
+	flex-direction row
+
+	&__bg
+		width 72%
+		height 100%
+
+	&__content
+		position relative
+		//text-align right
+		padding-top 100px
+		background $primary
+		width 28%
+		color $white
+		height 100%
+		display flex
+		flex-direction: column
+		align-items center
+
+		.wrapper
+			display flex
+			flex-direction column
+			justify-content space-around
+			
+	&__title
+		font-weight 500
+		font-size 64px
+		line-height 1.06em
+		margin 0 0 16px 0
+		display flex
+		flex-direction column
+		align-items center
+
+	&__subtitle
+		font-size 21px
+		display block
+		margin-bottom 32px
+		font-weight 300
+		width 200px
+
+	&__labels
+		position absolute
+		bottom 0
+		left 0
+		width 100%
+
+	&__labels-wrapper
+		width 90%
+		max-width 1360px
+		margin-left auto
+		margin-right auto
+
+	&__label
+		background $white
+		padding 8px
+		display inline-flex
+		align-items center
+
+		img
+			width 110px
+			margin-left 8px
+
+	&__light-btn
+		display none
+
+	&__primary-btn
+		width 80%
+		text-align center
+
+	@media screen and (max-width: 1440px)
+		&__bg
+		&__bg-overlay
+			background-position 150% 50px
+			background-size auto 105%
+			width 100%
+			height 100%
+
+	@media screen and (max-width: 1200px)
+		&__title
+			font-size 42px
+
+		&__bg
+			background-position 100% 70px
+			background-size auto 100%
+			width 100%
+			height 100%
+
+	@media screen and (max-width: 1023px)
+		margin-top 0
+
+		&::before
+			content ''
+			display block
+			position absolute
+			left 0
+			top 0
+			width 100vw
+			height 100%
+			background rgba(0,0,0,.3)
+			z-index 1
+
+		&__bg
+			width 100%
+			background-position 0% 20px
+			background-size auto 109%
+			height 100%
+		
+		&__title
+			font-size 48px
+
+		&__content
+			padding-top 20px
+			display flex
+			flex-direction column
+			justify-content center
+			height 100%
+			width 40%
+			z-index 1
+
+		&__primary-btn
+			display none
+
+		&__light-btn
+			display inline-block
+
+		&__labels
+			z-index 1
+
+	@media screen and (max-width: 767px)
+		min-height 470px
+		background-size cover
+
+		&__title
+			font-size 36px
+
+		&__content
+			background transparent
+
+		&_content-wrapper
+			position relative
+
+		.main__logo-link
+			display none
+		
+		&__content
+			width 70%
+
+		&__subtitle
+			width 300px
+			p
+				font-weight 500
+				font-size 32px
+				margin 0 0 50px 0
+
+	@media screen and (max-width: 424px)
+		&__title
+			font-size 32px
+		&__bg
+			width 100%
+			background-position 40% 20px
+			background-size auto 100%
+			height 100%
+
+	@media screen and (max-width: 374px)
+		&__title
+			font-size 28px

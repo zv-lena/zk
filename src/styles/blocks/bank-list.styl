@@ -1,0 +1,82 @@
+.bank-list
+	height 97px
+	position relative
+	overflow hidden
+
+	&__slider
+		overflow visible
+
+	&__bank
+		width 132px
+
+	&__bank-item
+		display flex
+		cursor pointer
+
+	input
+		position absolute
+		clip rect(0 0 0 0)
+		width 1px
+		height 1px
+		margin -1px
+
+	&__image-container
+		width 48px
+		height 48px
+		display flex
+		justify-content center
+		align-items center
+		flex-shrink 0
+
+		img
+			width 32px
+
+	&__rate
+		border 1px solid $grayLight
+		border-left none
+		display flex
+		align-items center
+		justify-content center
+		background #fff
+		transition background 350ms
+		min-width 80px
+
+		input:focus ~ &
+		input:checked ~ &
+		^[0]__bank-item:hover &
+			transition-duration 175ms
+			background darken(#fff, 5)
+
+	&__placeholder
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		opacity 0
+		visibility hidden
+		padding 24px 32px
+		display flex
+
+		^[0]_empty &
+			opacity 1
+			visibility visible
+
+		& ^[0]__image-container
+			background $gray
+
+		& ^[0]__rate
+			background $grayLight
+			margin-right 24px
+
+	@media screen and (max-width: 1200px)
+		&__placeholder
+			padding 24px
+
+	@media screen and (max-width: 767px)
+		&__placeholder
+			& ^[0]__bank-item
+				&:not(:first-child)
+					display none
+
+

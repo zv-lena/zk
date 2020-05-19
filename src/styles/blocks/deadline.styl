@@ -1,0 +1,48 @@
+.deadline
+	height 714px
+	background-size cover
+	background-repeat no-repeat
+	padding 96px 0 72px
+
+	&__content
+		display flex
+		flex-direction column
+		justify-content space-between
+		height 100%
+
+	&__title
+		color #fff
+		width 50%
+		margin 0
+
+	&__link
+		align-self flex-end
+		color #fff
+		display flex
+		align-items center
+		transition color 350ms
+
+		&:hover
+		&:focus
+			transition-duration 175ms
+			color darken(#fff, 25)
+
+	&__play-icon
+		width 29px
+		height 40px
+		fill #fff
+		margin-left 24px
+		transition color 350ms
+
+		^[0]__link:hover &
+		^[0]__link:focus &
+			transition-duration 175ms
+			fill darken(#fff, 25)
+
+	@media screen and (max-width: 767px)
+		height 450px
+
+		&__title
+			width 100%
+		
+		padding 56px 0

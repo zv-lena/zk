@@ -1,0 +1,42 @@
+.accordion
+	border-bottom 1px solid $primaryLight
+
+	&__headline
+		outline none
+		background none
+		padding 16px 32px 16px 0
+		font-size 18px
+		position relative
+		display block
+		width 100%
+		text-align left
+		border none
+		cursor pointer
+
+		&::after
+			content ''
+			display block
+			position absolute
+			right 5px
+			top 14px
+			width 14px
+			height 14px
+			border 1px solid $grayDark
+			border-width 0 1px 1px 0
+			transform rotate(45deg)
+			transition transform 350ms
+
+			^[0]_open &
+				transition-duration 175ms
+				transform translateY(8px) rotate(-135deg)
+
+	&__wrapper
+		background #fff
+
+	&__content
+		transition opacity 350ms
+		padding 24px
+		opacity 0
+
+		^[0]_open &
+			opacity 1
